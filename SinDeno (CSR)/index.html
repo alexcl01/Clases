@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            var numero = 0;
+            function renderNumber(){
+                const b = document.getElementById("bloque");
+                b.innerHTML=numero;
+            }
+        </script>
+        <title>Mi Primera Pagina</title>
+        <style>
+            h1{
+                color: orchid;
+                background: black;
+                text-transform: uppercase;
+                width: 350px;
+                margin: auto;
+                text-align: center;
+                border-radius: 15px;
+            }
+            h1:hover{
+                background: white;
+            }
+        </style>
+    </head>
+    <body onload="renderNumber()">
+        <div id="bloque"></div>
+    </body>
+</html>

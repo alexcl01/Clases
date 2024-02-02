@@ -1,0 +1,19 @@
+Código que se ejecuta en el navegador (sin deno) --> Client Side Rendering (CSR)
+
+Código que se ejecuta en el ordenador (con deno) --> Server Side Rendering (SSR)
+
+FRAMEWORK - Deno Fresh (Explica mejor los conceptos de Front)
+
+
+
+Proveemos al navegador de HTML, CSS y JavaScript 
+
+HTML - Etiquetar contenido (Lo que muestro)
+    - Hover: cambia al pasar por encima con el ratón
+
+
+
+CSS - (Cómo lo muestro)
+
+
+JavaScript - 
