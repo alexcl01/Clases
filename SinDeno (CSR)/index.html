@@ -1,10 +1,25 @@
 <html>
     <head>
         <script>
-            var numero = 0;
-            function renderNumber(){
+            var lista = [];
+            function addToList(){
+                const texto = document.getElementById("texto").value;
+                lista.push(texto);
+                document.getElementById("texto").value="";
+                renderList();
+            }
+            function renderList(){
                 const b = document.getElementById("bloque");
-                b.innerHTML=numero;
+                b.innerHTML="<ul>";
+                    for(var i=0; i<lista.length; i++){
+                        b.innerHTML+=`<li>${lista[i]}</li>`
+                    }
+                    b.innerHTML+="</ul>"
+            }
+
+            function incNumber(){
+                numero++;
+                renderList();
             }
         </script>
         <title>Mi Primera Pagina</title>
@@ -23,7 +38,9 @@
             }
         </style>
     </head>
-    <body onload="renderNumber()">
+    <body onload="renderList()">
+        <input id="texto" type="text"> 
+        <button onclick="addToList()">Añadir</button>
         <div id="bloque"></div>
     </body>
 </html>
