@@ -1,0 +1,10 @@
+Todo se ha renderizado en el servidor (personajes).
+    Al navegador le llega la info ya procesada.
+
+Obtener datos de una API -> Mostrar por pantalla la lista de personajes de Rick y Morty
+
+Función asíncrona ya que necesitará esperar a que le llegue la info de la API
+
+AXIOS: llamar a la API 
+
+En las listas [RENDERIZADO DE ARRAYS] (<li>) todos los elementos deben tener una key 

@@ -1,0 +1,7 @@
+Hacer rutas dinámicas
+
+Ejemplo: si la ruta es: localhost/8000/Hola/Juan 
+    En la página web salga "Hola Juan"
+
+La carpeta hola hace referencia a la parte fija de la ruta dinámica
+El archivo [name] está entre corchetes porque es identificativo de las rutas dinámicas; es la parte que va a cambiar.

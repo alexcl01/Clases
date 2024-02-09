@@ -2,17 +2,31 @@
     <head>
         <script>
             var lista = [];
-            function addToList(){
-                const texto = document.getElementById("texto").value;
-                lista.push(texto);
-                document.getElementById("texto").value="";
+            function removeFromList(i){
+                lista.splice(i,1);
                 renderList();
             }
+
+            function addToList(){
+                const texto = document.getElementById("texto").value;
+                if(!lista.includes(texto)){
+                    lista.push(texto);
+                    renderList();
+                    document.getElementById("texto").value="";
+                }else{
+                    document.getElementById("texto").style.backgroundColor = "red";
+                    renderList();
+                }
+            }
+
             function renderList(){
                 const b = document.getElementById("bloque");
                 b.innerHTML="<ul>";
                     for(var i=0; i<lista.length; i++){
-                        b.innerHTML+=`<li>${lista[i]}</li>`
+                        b.innerHTML+=`<li>${lista[i]}<button onclick="removeFromList(${i})">
+                                Borrar
+                            </button>
+                        </li>`
                     }
                     b.innerHTML+="</ul>"
             }
@@ -21,6 +35,7 @@
                 numero++;
                 renderList();
             }
+
         </script>
         <title>Mi Primera Pagina</title>
         <style>

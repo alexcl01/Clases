@@ -1,0 +1,6 @@
+En este tutorial vemos que el código se renderiza en el servidor 
+    -> index.tsx: se pueden hacer funciones entre {}, pero no se pueden bucles.
+    
+    Podemos verlo en el código fuente de las páginas.
+
+PREGUNTAR: POR QUÉ NO FUNCIONAN LOS IMPORT !!!
