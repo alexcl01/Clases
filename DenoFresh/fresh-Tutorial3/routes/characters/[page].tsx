@@ -3,7 +3,26 @@
 
 import Axios from "npm:axios";
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
-import { CharacterPage } from "../../types.ts"; 
+
+export type Character = {
+    id: string;
+    name: string;
+    status: string;
+    species: string;
+    type: string;
+    gender: string;
+    image: string;
+};
+
+export type CharacterPage = {
+    info: {
+      count: number;
+      pages: number;
+      next: string;
+      prev: string;
+    };
+    results: Character[];
+};
 
 type Data = CharacterPage & { page: string };
 
