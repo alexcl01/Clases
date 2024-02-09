@@ -5,13 +5,10 @@ import Axios from "npm:axios";
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
 
 export type Character = {
-    id: string;
+    id: number;
     name: string;
-    status: string;
-    species: string;
-    type: string;
-    gender: string;
     image: string;
+    status: string;
 };
 
 export type CharacterPage = {
@@ -47,7 +44,7 @@ const Page = (props: PageProps<Data>) => {
   return (
     <>
       <h1>Página {page}</h1>
-      {parseInt(page) > 1 && ( <a href={`/characters/${parseInt(page) - 1}`}>Anterior página</a> )}&nbsp; | &nbsp;
+      {parseInt(page) > 1 && ( <a href={`/characters/${parseInt(page) - 1}`}>Anterior página</a> )}---
       {parseInt(page) < info.pages && ( <a href={`/characters/${parseInt(page) + 1}`}>Siguiente página</a> )}
 
       <ul>
