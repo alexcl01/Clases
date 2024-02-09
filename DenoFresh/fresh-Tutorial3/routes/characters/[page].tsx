@@ -16,23 +16,21 @@ export type CharacterPage = {
       count: number;
       pages: number;
       next: string;
-      prev: string;
+      previous: string;
     };
     results: Character[];
 };
 
-type Data = CharacterPage & { page: string };
+export type Data = {
+    CharacterPage;
+    page: string;
+}
 
 export const handler: Handlers<Data> = {
   async GET(_req: Request, ctx: FreshContext<unknown, Data>) {
     const { page } = ctx.params;
     const response = await Axios.get<CharacterPage>(`https://rickandmortyapi.com/api/character?page=${page}`);
     if (response.status !== 200) {
-      console.error(
-        "Ha habido un error",
-        response.status,
-        response.statusText,
-      );
       throw new Error("Ha habido un error");
     }
     return ctx.render({ ...response.data, page });
