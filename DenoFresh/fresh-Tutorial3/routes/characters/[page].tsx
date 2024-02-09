@@ -29,17 +29,14 @@ type Data = CharacterPage & { page: string };
 export const handler: Handlers<Data> = {
   async GET(_req: Request, ctx: FreshContext<unknown, Data>) {
     const { page } = ctx.params;
-    // get rick and morty characters
-    const response = await Axios.get<CharacterPage>(
-      `https://rickandmortyapi.com/api/character?page=${page}`,
-    );
+    const response = await Axios.get<CharacterPage>(`https://rickandmortyapi.com/api/character?page=${page}`);
     if (response.status !== 200) {
       console.error(
-        "Error fetching characters",
+        "Ha habido un error",
         response.status,
         response.statusText,
       );
-      throw new Error("Error fetching characters");
+      throw new Error("Ha habido un error");
     }
     return ctx.render({ ...response.data, page });
   },
@@ -49,13 +46,10 @@ const Page = (props: PageProps<Data>) => {
   const { info, results, page } = props.data;
   return (
     <>
-      <h1>Page {page}</h1>
-      {parseInt(page) > 1 && (
-        <a href={`/characters/${parseInt(page) - 1}`}>Previous</a>
-      )}&nbsp; | &nbsp;
-      {parseInt(page) < info.pages && (
-        <a href={`/characters/${parseInt(page) + 1}`}>Next</a>
-      )}
+      <h1>Página {page}</h1>
+      {parseInt(page) > 1 && ( <a href={`/characters/${parseInt(page) - 1}`}>Anterior página</a> )}&nbsp; | &nbsp;
+      {parseInt(page) < info.pages && ( <a href={`/characters/${parseInt(page) + 1}`}>Siguiente página</a> )}
+
       <ul>
         {results.map((character) => (
           <li key={character.id}>
@@ -63,6 +57,7 @@ const Page = (props: PageProps<Data>) => {
           </li>
         ))}
       </ul>
+
     </>
   );
 };
