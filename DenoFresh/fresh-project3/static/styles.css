@@ -1,0 +1,57 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+img.shape {
+  border-radius: 50% 50% 0 0;
+}
+
+.characterContainer {
+  overflow: hidden;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 10px;
+  width: 250px;
+}
+
+.characterContainer:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: black;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px;
+  color: black;
+}
+
+.text-1line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}

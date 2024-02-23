@@ -1,0 +1,3 @@
+Debugger: saber qué saldría por pantalla en cada momento, línea a línea
+
+deno.json - añadir debugger 

@@ -1,0 +1,2 @@
+Componentes: bloques de código que permiten agrupar partes de nuestra página 
+- Son renderizados en el servidor

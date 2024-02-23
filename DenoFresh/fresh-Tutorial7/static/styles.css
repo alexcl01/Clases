@@ -1,0 +1,38 @@
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+button.primary {
+  background-color: red;
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button.primary:active {
+  background-color: white;
+  color: red;
+}
+
+button.secondary {
+  background-color: blue;
+  color: white;
+}
+
+button.secondary:hover {
+  background-color: #4d4dff;
+  color: white;
+}
+
+button.secondary:active {
+  background-color: white;
+  color: blue;
+}
