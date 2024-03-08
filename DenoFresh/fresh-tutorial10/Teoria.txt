@@ -1,0 +1,3 @@
+Validación de formularios - comprobar que es mayor de 18 años
+
+Un componente puede tener islas, pero las islas no pueden tener componentes

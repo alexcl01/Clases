@@ -1,0 +1,4 @@
+Islands - si está aquí es que se debe ejecutar en el cliente
+
+Estado de un componente: variables de las que el componente depende. Si la variable cambia, el componente cambiará (repintar la página)
+
