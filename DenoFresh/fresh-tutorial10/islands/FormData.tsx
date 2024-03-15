@@ -2,6 +2,12 @@ import { useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
 import { JSX } from "preact";
 
+export type Data = {
+    name: string;
+    email: string;
+    age: number;
+};
+
 export const FormData: FunctionComponent = () => {
   const [error, setError] = useState<string>("");
   const [name, setName] = useState<string>("");
@@ -33,10 +39,9 @@ export const FormData: FunctionComponent = () => {
     <div class="form">
       <h1>Introduce tus datos</h1>
       <form
-        action="/submitform.tsx"
+        action="/add"
         method="POST"
         onSubmit={submitHandler}
-          
       >
         <div>
           <label for="name">Name</label>

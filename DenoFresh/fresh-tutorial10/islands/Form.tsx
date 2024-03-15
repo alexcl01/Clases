@@ -7,7 +7,7 @@ type Error = {
 };
 
 export const Form: FunctionComponent = () => {
-    //validación (lado del cliente)
+    // validación (lado del cliente)
   const [error, setError] = useState<Error>({
     // valor inicial: no hay error, mensaje vacío
     error: false,

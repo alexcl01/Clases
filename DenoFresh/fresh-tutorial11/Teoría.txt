@@ -1,0 +1,16 @@
+Llamar a una API desde el cliente - No podrá haber claves ocultas (env)
+
+Forma de hacerlo con botón (la página se recarga cada vez que se pulsa):
+onInput={(e) => setName(e.currentTarget.value)}
+        />
+        <br />
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            onSearch(name);
+          }}
+        >
+          Buscar
+        </button>
+
+
