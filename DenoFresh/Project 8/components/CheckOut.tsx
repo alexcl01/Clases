@@ -13,10 +13,6 @@ type Country = {
   code: string;
 };
 
-type CountryResponse = {
-  data: { [key: string]: { country: string } };
-};
-
 const CheckOut: FunctionalComponent<Props> = ({ cart, page }) => {
   const [country, setCountry] = useState<string>("");
   const [city, setCity] = useState<string>("");

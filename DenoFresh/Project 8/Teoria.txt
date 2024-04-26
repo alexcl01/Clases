@@ -1,3 +1,7 @@
+MISMO EJERCICIO DE LA WEB DE SUPERMERCADO
+Islands - Client Side
+Routes - Server Side 
+
 Si solo hay una ruta -> es client side
 
 Consola de desarrolladores - Network 
@@ -8,3 +12,9 @@ Consola de desarrolladores - Network
 COOKIES (string) --> Client Side
 a = document.cookies = " "
 
+
+
+SSR: HACER EL CONTADOR DE PRODUCTOS AL LADO DE SHOPPING CART 
+señal se comparta entre islas que no son hermanas
+utils/cartSignal.ts
+islands/Numerajo.tsx

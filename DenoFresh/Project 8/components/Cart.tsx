@@ -63,8 +63,6 @@ const Cart: FunctionComponent<Props> = ({ cart, page }) => {
           <div class="total-text">Total:</div>
           <div class="total-price">
             {
-              // fix to to decimals
-
               cart.value
                 .reduce(
                   (acc, item) => acc + item.product.price * item.quantity,
