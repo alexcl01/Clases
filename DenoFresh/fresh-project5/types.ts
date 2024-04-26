@@ -6,3 +6,4 @@ export type Book = {
 export type BooksResponse = {
     docs: Book[]
 }
+

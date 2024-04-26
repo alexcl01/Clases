@@ -1,0 +1,6 @@
+Hooks de efecto: 
+Se efectúan (tres posibilidades)
+- solo la primera vez
+- primera vez y cuando cambia una variable
+- siempre
+

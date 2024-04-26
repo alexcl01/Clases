@@ -1,0 +1,10 @@
+Si solo hay una ruta -> es client side
+
+Consola de desarrolladores - Network 
+    - se puede ver las llamadas a la API
+    - Response: se puede ver lo que devuelve
+
+
+COOKIES (string) --> Client Side
+a = document.cookies = " "
+
